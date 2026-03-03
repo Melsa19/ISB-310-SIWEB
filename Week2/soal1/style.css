@@ -1,0 +1,78 @@
+body {
+    background-color: #5F88A5;
+    font-family: Arial;
+}
+
+/* Container utama */
+.container {
+    width: 800px;
+    margin: auto;
+    background-color: #D8E3E7;
+}
+
+/* Header */
+.header {
+    background-color: #E2D800;
+    height: 200px;
+    text-align: center;
+    padding-top: 70px;
+    color: #032152;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+
+    background-image: radial-gradient(circle, #5F88A5 5px, transparent 6px);
+    background-size: 30px 20px;
+    background-repeat: repeat-x;
+}
+
+/* Content */
+.content {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    border-right: 2px dotted #032152;
+}
+
+/* Main */
+.main {
+    width: 500px;
+    padding: 20px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #9CBCD0;
+    text-align: center;
+}
+
+table th {
+    background-color: #032152;
+    color: white;
+    padding: 10px;
+}
+
+table td {
+    padding: 10px;
+}
+
+/* Footer table */
+.footer-table {
+    background-color: #D8E3E7;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 4px solid #032152;
+}
