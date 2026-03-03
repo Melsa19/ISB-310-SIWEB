@@ -2,50 +2,43 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preferensi Warna</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Preferensi Warna</h1>
-        
-        <div class="judul-warna">
-            <strong>Warna</strong>
+
+    <h1 id="judul">Preferensi Warna</h1>
+
+    <fieldset>
+        <legend>Warna</legend>
+
+        <div class="item">
+            <span>1. Warna latarbelakang</span>
+            <div class="color-box" id="bgBox"></div>
         </div>
-        
-        <div class="daftar-warna">
-            <div class="baris-warna">
-                <span>1. <strong>Warna latarbelakang</strong></span>
-                <div class="kotak-warna" id="bgBox" style="background-color: #ffffff;"></div>
-            </div>
-            
-            <div class="baris-warna">
-                <span>2. <strong>Warna teks</strong></span>
-                <div class="kotak-warna" id="textBox" style="background-color: #000000;"></div>
-            </div>
+
+        <div class="item">
+            <span>2. Warna teks</span>
+            <div class="color-box" id="textBox"></div>
         </div>
-        
-        <button class="btn-simpan" id="simpanBtn">Simpan</button>
-    </div>
+
+    </fieldset>
+
+    <button id="saveBtn">Simpan</button>
 
     <!-- Modal -->
-    <div class="modal" id="modalWarna">
+    <div class="modal" id="colorModal">
         <div class="modal-content">
-            <div class="color-preview" id="previewWarna"></div>
-            
-            <div style="margin: 20px 0;">
-                <input type="color" id="colorPicker" style="width: 100%; height: 40px;">
+            <div class="modal-header">
+                <button id="cancelBtn">Cancel</button>
+                <h3>Choose a color</h3>
+                <button id="selectBtn">Select</button>
             </div>
-            
-            <div style="display: flex; gap: 10px;">
-                <button class="btn-batal" id="batalBtn">Cancel</button>
-                <div style="flex: 1; text-align: center; color: #666; padding: 5px;">Choose a color</div>
-                <button class="btn-pilih" id="pilihBtn">Select</button>
-            </div>
+
+            <div class="color-grid" id="colorGrid"></div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
