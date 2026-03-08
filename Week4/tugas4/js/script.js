@@ -12,6 +12,58 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// ==========================================
+// LOGIKA UNTUK HALAMAN MENU
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const qtyMie = document.getElementById("qty-mie-goreng");
+  const qtyNasi = document.getElementById("qty-nasi-goreng");
+  const qtyAyam = document.getElementById("qty-ayam-mentega");
+
+  const fieldTotal = document.getElementById("jumlah-total");
+  const fieldDiskon = document.getElementById("diskon");
+  const fieldBayar = document.getElementById("jumlah-bayar");
+
+  const btnReset = document.getElementById("btn-reset");
+
+  const hargaMie = 15000;
+  const hargaNasi = 20000;
+  const hargaAyam = 15000;
+
+  function hitungTotal() {
+
+    let b = parseInt(qtyMie.value) || 0;
+    let s = parseInt(qtyNasi.value) || 0;
+    let m = parseInt(qtyAyam.value) || 0;
+
+    let total = (b * hargaMie) + (s * hargaNasi) + (m * hargaAyam);
+
+    let diskon = 0;
+    if (total > 50000) {
+      diskon = total * 0.1;
+    }
+
+    let bayar = total - diskon;
+
+    fieldTotal.value = total;
+    fieldDiskon.value = diskon;
+    fieldBayar.value = bayar;
+  }
+
+  qtyMie.addEventListener("input", hitungTotal);
+  qtyNasi.addEventListener("input", hitungTotal);
+  qtyAyam.addEventListener("input", hitungTotal);
+
+  btnReset.addEventListener("click", function () {
+    qtyMie.value = 0;
+    qtyNasi.value = 0;
+    qtyAyam.value = 0;
+    hitungTotal();
+  });
+
+});
 
 // ==========================================
 // LOGIKA UNTUK HALAMAN GARIS HIDUP

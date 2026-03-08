@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu </title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main-box">
+      <div class="header-images">
+        <img src="asset/itenas.jpg" alt="Gedung Itenas" />
+        <img src="asset/itenas.jpg" alt="Gedung Itenas" />
+        <img src="asset/itenas.jpg" alt="Gedung Itenas" />
+        <img src="asset/itenas.jpg" alt="Gedung Itenas" />
+        <img src="asset/itenas.jpg" alt="Gedung Itenas" />
+        <img src="asset/itenas.jpg" alt="Gedung Itenas" />
+      </div>
+
+      <div class="body-content">
+        <div class="sidebar">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="calculator.html">Calculator</a>
+          <a href="garis_hidup.html">Garis Hidup</a>
+        </div>
+
+        <div class="content-area">
+          <table class="menu-table">
+            <tr>
+              <th>No</th>
+              <th>Makanan/Minuman</th>
+              <th>Harga</th>
+              <th>Pesan</th>
+              <td rowspan="7" class="reset-cell">
+                <button type="button" id="btn-reset">Reset</button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Mie Goreng</td>
+              <td>@ Rp 15000</td>
+              <td><input type="number" id="qty-mie-goreng" value="0" min="0" /></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Nasi Goreng</td>
+              <td>@ Rp 20000</td>
+              <td><input type="number" id="qty-nasi-goreng" value="0" min="0" /></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Ayam Mentega</td>
+              <td>@ Rp 15000</td>
+              <td><input type="number" id="qty-ayam-mentega" value="0" min="0" /></td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-right">Jumlah Total</td>
+              <td>
+                <input type="text" id="jumlah-total" value="0" readonly />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-right">Diskon</td>
+              <td><input type="text" id="diskon" value="0" readonly /></td>
+            </tr>
+            <tr>
+              <td colspan="3" class="text-right">Jumlah Bayar</td>
+              <td>
+                <input type="text" id="jumlah-bayar" value="0" readonly />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="footer">
+        162023037<br />
+        Sistem Informasi | ITENAS 2026
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
